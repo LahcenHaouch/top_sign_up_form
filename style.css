@@ -1,0 +1,151 @@
+@font-face {
+  font-family: "Norse Bold";
+  src: url("assets/Norse-Bold.otf");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: system-ui;
+}
+
+body {
+  display: flex;
+  background-color: #f9fafb;
+}
+
+.container {
+  flex: 1;
+}
+
+.image-container {
+  position: relative;
+  background-image: url("assets/astronaut.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 40vw;
+
+  .logo-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 4rem;
+    width: 100%;
+    padding-block: 4px;
+
+    img {
+      width: 50px;
+    }
+
+    h1 {
+      color: white;
+      text-shadow: 0 0 2px white;
+      font-family: "Norse Bold";
+    }
+  }
+
+  .photographer {
+    width: 100%;
+    position: absolute;
+    bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    p {
+      color: white;
+      width: fit-content;
+      text-align: center;
+      font-size: 0.8rem;
+      text-shadow: 0 0 2px white;
+
+      a {
+        color: white;
+        &:visited {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.description {
+  padding: 120px 48px 0;
+  margin-bottom: 24px;
+
+  p:nth-child(2) {
+    margin-top: 24px;
+  }
+
+  p {
+    font-weight: bold;
+
+    span {
+      font-style: italic;
+    }
+  }
+}
+
+.form-content-container {
+  padding: 16px 48px;
+  background-color: white;
+  width: 100%;
+  box-shadow: 0 4px 4px lightgray;
+
+  h2 {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+
+  & > div {
+    display: flex;
+    gap: 48px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+
+      label {
+        font-size: 0.75rem;
+        font-weight: 500;
+      }
+      input {
+        width: 200px;
+        border: 1px solid #ebecef;
+        border-radius: 4px;
+        padding: 2px 4px;
+
+        &:focus-visible {
+          outline-color: #446cde;
+        }
+      }
+    }
+  }
+}
+
+.form-submit-container {
+  padding: 16px 48px;
+
+  button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+  }
+
+  p {
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+.invalid,
+input:user-invalid {
+  outline: 1px solid red;
+}
